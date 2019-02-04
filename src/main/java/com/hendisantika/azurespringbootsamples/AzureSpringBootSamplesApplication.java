@@ -23,7 +23,7 @@ public class AzureSpringBootSamplesApplication {
     }
 
     public void run(String... var1) throws Exception {
-        final User testUser = new User(1L, "Uzumaki", "Naruto", "Konohagakure");
+        final User testUser = new User("001", "Uzumaki", "Naruto", "Konohagakure");
 
         repository.deleteAll();
         repository.save(testUser);

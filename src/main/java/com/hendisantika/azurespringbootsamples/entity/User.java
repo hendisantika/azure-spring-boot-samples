@@ -4,7 +4,6 @@ import com.microsoft.azure.spring.data.cosmosdb.core.mapping.Document;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 
 /**
  * Created by IntelliJ IDEA.
@@ -15,13 +14,12 @@ import org.springframework.data.annotation.Id;
  * Date: 2019-02-05
  * Time: 05:50
  */
-@Document(collection = "mycollection")
+@Document(collection = "user")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
-    @Id
-    private Long id;
+    private String id;
     private String firstName;
     private String lastName;
     private String address;

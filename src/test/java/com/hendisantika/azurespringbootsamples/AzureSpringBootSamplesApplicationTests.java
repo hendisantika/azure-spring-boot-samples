@@ -1,17 +1,18 @@
 package com.hendisantika.azurespringbootsamples;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import com.hendisantika.azurespringbootsamples.repository.UserRepository;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class AzureSpringBootSamplesApplicationTests {
+@SpringBootTest(properties = "spring.cloud.azure.cosmos.enabled=false")
+class AzureSpringBootSamplesApplicationTests {
+
+    @MockitoBean
+    private UserRepository userRepository;
 
     @Test
-    public void contextLoads() {
+    void contextLoads() {
     }
 
 }
-

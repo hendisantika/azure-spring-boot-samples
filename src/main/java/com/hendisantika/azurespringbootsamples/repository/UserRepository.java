@@ -1,7 +1,7 @@
 package com.hendisantika.azurespringbootsamples.repository;
 
 import com.hendisantika.azurespringbootsamples.entity.User;
-import com.microsoft.azure.spring.data.cosmosdb.repository.DocumentDbRepository;
+import com.azure.spring.data.cosmos.repository.CosmosRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -14,5 +14,5 @@ import org.springframework.stereotype.Repository;
  * Time: 06:02
  */
 @Repository
-public interface UserRepository extends DocumentDbRepository<User, String> {
+public interface UserRepository extends CosmosRepository<User, String> {
 }

@@ -1,6 +1,7 @@
 package com.hendisantika.azurespringbootsamples.entity;
 
-import com.microsoft.azure.spring.data.cosmosdb.core.mapping.Document;
+import com.azure.spring.data.cosmos.core.mapping.Container;
+import org.springframework.data.annotation.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,11 +15,12 @@ import lombok.NoArgsConstructor;
  * Date: 2019-02-05
  * Time: 05:50
  */
-@Document(collection = "user")
+@Container(containerName = "user")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
+    @Id
     private String id;
     private String firstName;
     private String lastName;
